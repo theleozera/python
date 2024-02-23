@@ -15,8 +15,8 @@ print(conjunto)
 print(conjunto2)
 
 from string import Template
-a= "ana"
-b= "marcia"
+a= "dhyullya"
+b= "cunha"
 
 ##interpolação
-print(f'nome: {a}')
+print(f'nome: {a} {b}')
