@@ -1,17 +1,10 @@
-# versao 1
-raio = 15.3
-pi = 3.14159
-area =raio**2 * pi
-print('A Area do circulo e:', area)
-
-# versao 2
-import math
-raio2 = 15.3
-pi2 = math.pi
-area2 =raio**2 * pi2
-print('A Area2 do circulo e:', area2)
-# versao 3
-# aqui eu forcei que a resposta fosse entendida como float
-raio3 = float(input("informe o raio:"))
-
-print('a area do circulo e:' , raio3**2*math.pi)
+import sys
+# importei circulo do arquivo funcao
+from funcao import circulo
+#aqui to vendo se eu consigo mandar o arquivo em vez do usuario
+if len(sys.argv)<2:
+    print('ops')
+else:
+    raio = sys.argv[1]
+    a=circulo(raio)
+    print(a)
