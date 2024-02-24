@@ -8,3 +8,4 @@ else:
     raio = sys.argv[1]
     a=circulo(raio)
     print(a)
+    print(a)
