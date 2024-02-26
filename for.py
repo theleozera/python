@@ -1,5 +1,5 @@
 
-import random
+from random import randint
 for i in range(1, 11):
     print('i = {}'.format(i))
 
@@ -61,14 +61,43 @@ for i in range(1,11):
         print(i)
 else:
         print('fimm')
-    
-dado = random(1,6)
+
+#for com if e else achando um valro sorteado
+from random import randint    
+dado = randint(1,6)
 print(dado)
-for valor in range(dado):
-    if valor % 2 ==1:
+for valor in range(1,7):
+    if valor % 2 ==1 :
         continue
     elif valor == dado:
-            print('acertou') 
+            print('acertou, era o', dado) 
             break
-    else: 
-        print('nao acertou')
+else: 
+    print('nao acertou, era o' , dado)
+# filtrando palavras, botamos algumas palavras como proibidas e verificamos se nas frases elas existem
+PALAVRAS_PROIBIDAS = ('futebol', 'politica', 'religiao')
+textos= ['joao gosta de futebol', ' a praia foi divertida']
+
+for texto in textos:
+    found = False
+    for palavra in texto.lower().split():
+          if palavra in PALAVRAS_PROIBIDAS:
+               print('texto tem palavras proibidas', palavra)
+               found = True
+               break
+    if not found:
+        print('texto autorizado', texto)
+
+def verificar_palavras_chave(frase):
+    palavras_chave = ['futebol', 'politica', 'religiao']
+    for palavra in palavras_chave:
+        if palavra in frase:
+            return False
+    return True
+
+frase = input("Digite uma frase: ")
+
+if verificar_palavras_chave(frase):
+    print("A frase está liberada.")
+else:
+    print("A frase contém uma ou mais palavras-chave e foi rejeitada.")

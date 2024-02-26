@@ -26,6 +26,5 @@ def faixa_etaria(idade):
 for idade in (17,34,5,89,101):
      print(f'{idade}:{faixa_etaria(idade)}')
 
-while True:
-     print("vai")
+
 
