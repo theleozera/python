@@ -88,6 +88,8 @@ for texto in textos:
     if not found:
         print('texto autorizado', texto)
 
+
+# mesma coisa aqui feita pelo chatgpt dai
 def verificar_palavras_chave(frase):
     palavras_chave = ['futebol', 'politica', 'religiao']
     for palavra in palavras_chave:
@@ -101,3 +103,14 @@ if verificar_palavras_chave(frase):
     print("A frase está liberada.")
 else:
     print("A frase contém uma ou mais palavras-chave e foi rejeitada.")
+
+# criando mesmo codigo com set
+PALAVRAS_PROIBIDAS = {'futebol', 'politica', 'religiao'}
+textos= ['joao gosta de futebol', ' a praia foi divertida']
+for texto in textos:
+    intersecao= PALAVRAS_PROIBIDAS.intersection(set(texto.lower().split()))
+    if intersecao:
+        print('texto possui palavras proibidas ', intersecao)
+    else: 
+        print('textto passou' , texto)
+    
